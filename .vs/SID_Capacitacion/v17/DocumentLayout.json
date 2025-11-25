@@ -1,0 +1,95 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\devel\\SID-L0000-71-2025\\Proyecto Base\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{11574F44-D2F3-4137-9239-681FD6B7CEEC}|ApiClientTest\\ApiClientTest.csproj|c:\\devel\\sid-l0000-71-2025\\proyecto base\\apiclienttest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11574F44-D2F3-4137-9239-681FD6B7CEEC}|ApiClientTest\\ApiClientTest.csproj|solutionrelative:apiclienttest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0A200EC-E715-4BF3-9448-6B4811707AAD}|ApiClientLibrary\\ApiClientLibrary.csproj|c:\\devel\\sid-l0000-71-2025\\proyecto base\\apiclientlibrary\\services\\f1_configuracioninicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0A200EC-E715-4BF3-9448-6B4811707AAD}|ApiClientLibrary\\ApiClientLibrary.csproj|solutionrelative:apiclientlibrary\\services\\f1_configuracioninicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0A200EC-E715-4BF3-9448-6B4811707AAD}|ApiClientLibrary\\ApiClientLibrary.csproj|c:\\devel\\sid-l0000-71-2025\\proyecto base\\apiclientlibrary\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D0A200EC-E715-4BF3-9448-6B4811707AAD}|ApiClientLibrary\\ApiClientLibrary.csproj|solutionrelative:apiclientlibrary\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{5a4e9529-b6a0-46b5-be4f-0f0b239bc0eb}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{4a9b7e51-aa16-11d0-a8c5-00a0c921a4d2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\devel\\SID-L0000-71-2025\\Proyecto Base\\ApiClientTest\\Program.cs",
+              "RelativeDocumentMoniker": "ApiClientTest\\Program.cs",
+              "ToolTip": "C:\\devel\\SID-L0000-71-2025\\Proyecto Base\\ApiClientTest\\Program.cs",
+              "RelativeToolTip": "ApiClientTest\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T20:06:40.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\devel\\SID-L0000-71-2025\\Proyecto Base\\ApiClientLibrary\\appsettings.json",
+              "RelativeDocumentMoniker": "ApiClientLibrary\\appsettings.json",
+              "ToolTip": "C:\\devel\\SID-L0000-71-2025\\Proyecto Base\\ApiClientLibrary\\appsettings.json",
+              "RelativeToolTip": "ApiClientLibrary\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAACPAgAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-25T20:05:30.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "F1_ConfiguracionInicial.cs",
+              "DocumentMoniker": "C:\\devel\\SID-L0000-71-2025\\Proyecto Base\\ApiClientLibrary\\Services\\F1_ConfiguracionInicial.cs",
+              "RelativeDocumentMoniker": "ApiClientLibrary\\Services\\F1_ConfiguracionInicial.cs",
+              "ToolTip": "C:\\devel\\SID-L0000-71-2025\\Proyecto Base\\ApiClientLibrary\\Services\\F1_ConfiguracionInicial.cs",
+              "RelativeToolTip": "ApiClientLibrary\\Services\\F1_ConfiguracionInicial.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T20:05:10.756Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
