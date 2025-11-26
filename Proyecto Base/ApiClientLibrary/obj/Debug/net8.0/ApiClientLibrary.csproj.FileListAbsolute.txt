@@ -12,3 +12,17 @@ C:\devel\SID-L0000-71-2025\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\ApiCl
 C:\devel\SID-L0000-71-2025\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\refint\ApiClientLibrary.dll
 C:\devel\SID-L0000-71-2025\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\ApiClientLibrary.pdb
 C:\devel\SID-L0000-71-2025\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\ref\ApiClientLibrary.dll
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\bin\Debug\net8.0\appsettings.json
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\bin\Debug\net8.0\ApiClientLibrary.deps.json
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\bin\Debug\net8.0\ApiClientLibrary.dll
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\bin\Debug\net8.0\ApiClientLibrary.pdb
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\ApiClientLibrary.csproj.AssemblyReference.cache
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\ApiClientLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\ApiClientLibrary.AssemblyInfoInputs.cache
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\ApiClientLibrary.AssemblyInfo.cs
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\ApiClientLibrary.csproj.CoreCompileInputs.cache
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\ApiClientLibrary.sourcelink.json
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\ApiClientLibrary.dll
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\refint\ApiClientLibrary.dll
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\ApiClientLibrary.pdb
+C:\devel\PracticaCursoSID\Proyecto Base\ApiClientLibrary\obj\Debug\net8.0\ref\ApiClientLibrary.dll

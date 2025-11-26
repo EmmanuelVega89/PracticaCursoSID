@@ -24,12 +24,11 @@ namespace ApiClientLibrary.Services
                 BaseAddress = new Uri($"{_configuration["ApiSettings:BaseUrl"]}{_basePath}")
             };
 
-            var token = _configuration["ApiSettings:Token"];
-            if (!string.IsNullOrEmpty(token))
-            {
-                _httpClient.DefaultRequestHeaders.Authorization =
-                    new AuthenticationHeaderValue("Bearer", token);
-            }
+            //if (!string.IsNullOrEmpty(token))
+            //{
+            //    _httpClient.DefaultRequestHeaders.Authorization =
+            //        new AuthenticationHeaderValue("Bearer", token);
+            //}
         }
 
         /// <summary>
@@ -47,6 +46,36 @@ namespace ApiClientLibrary.Services
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await _httpClient.PostAsync("EstadoSID", content);
             return response;
+        }
+
+        public async Task<bool> AutenticarYObtenerTokenAsync(string username, string password)
+        {
+            // Construye la URL completa usando la base del appsettings
+            var baseUrl = _configuration["ApiSettings:BaseUrl"];
+            var loginUrl = $"{baseUrl}F0_Acceso/Login";
+            var loginBody = new
+            {
+                username,
+                password
+            };
+            var json = JsonSerializer.Serialize(loginBody);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            using var client = new HttpClient();
+            var response = await client.PostAsync(loginUrl, content);
+
+            if (!response.IsSuccessStatusCode)
+                return false;
+
+            var responseString = await response.Content.ReadAsStringAsync();
+            using var doc = JsonDocument.Parse(responseString);
+            if (doc.RootElement.TryGetProperty("token", out var tokenElement))
+            {
+                var token = tokenElement.GetString();
+                SetToken(token);
+                return true;
+            }
+            return false;
         }
     }
 }

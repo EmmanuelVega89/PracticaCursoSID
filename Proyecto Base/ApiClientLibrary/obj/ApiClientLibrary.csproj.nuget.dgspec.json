@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\devel\\PracticaCursoSID\\ApiClientLibrary\\ApiClientLibrary.csproj": {}
+    "C:\\devel\\PracticaCursoSID\\Proyecto Base\\ApiClientLibrary\\ApiClientLibrary.csproj": {}
   },
   "projects": {
-    "C:\\devel\\PracticaCursoSID\\ApiClientLibrary\\ApiClientLibrary.csproj": {
+    "C:\\devel\\PracticaCursoSID\\Proyecto Base\\ApiClientLibrary\\ApiClientLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\devel\\PracticaCursoSID\\ApiClientLibrary\\ApiClientLibrary.csproj",
+        "projectUniqueName": "C:\\devel\\PracticaCursoSID\\Proyecto Base\\ApiClientLibrary\\ApiClientLibrary.csproj",
         "projectName": "ApiClientLibrary",
-        "projectPath": "C:\\devel\\PracticaCursoSID\\ApiClientLibrary\\ApiClientLibrary.csproj",
+        "projectPath": "C:\\devel\\PracticaCursoSID\\Proyecto Base\\ApiClientLibrary\\ApiClientLibrary.csproj",
         "packagesPath": "C:\\Users\\emman\\.nuget\\packages\\",
-        "outputPath": "C:\\devel\\PracticaCursoSID\\ApiClientLibrary\\obj\\",
+        "outputPath": "C:\\devel\\PracticaCursoSID\\Proyecto Base\\ApiClientLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentResults": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -61,6 +69,22 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
+            },
+            "Spectre.Console": {
+              "target": "Package",
+              "version": "[0.54.0, )"
             }
           },
           "imports": [
