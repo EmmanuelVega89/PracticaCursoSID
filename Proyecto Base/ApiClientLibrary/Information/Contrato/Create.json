@@ -1,0 +1,19 @@
+﻿{
+  "$Tipo": "ContratoCFE",
+  "id": "",
+  "tipoContrato": "ContratoCFE",
+  "noContrato": "6875699",
+  "estatus": "IN_ACTIVO",
+  "detalleContrato" : [{
+        "partidaContrato" : "1",
+        "descripcionAviso" : "Transformador de baja",
+        "areaDestinoCFE" : "CFE",
+        "cantidad" : 0,
+        "unidad": "pz",
+        "importeTotal": 5000
+  }],
+  "urlArchivo" : "https://www.cfe.mx",
+  "mD5": "",
+  "fechaEntregaCFE":"2025-11-26T17:25:06.51Z"
+}
+

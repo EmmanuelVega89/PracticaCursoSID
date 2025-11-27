@@ -1,0 +1,12 @@
+﻿{
+  "id": "",
+  "claveExpediente": "EXP-2711",
+  "ordenFabricacion": "6925f6216c33582c13c7058e",
+  "cantidadMuestras": 10,
+  "maximoRechazos": 0,
+  "muestras": [
+    "1",
+    "2",
+    "3"
+  ]
+}

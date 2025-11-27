@@ -1,0 +1,15 @@
+﻿{
+  "id": "6925f0ea6c33582c13c7057a",
+  "codigoFabricante": "DCC604",
+  "descripcion": "Transformador tipo poste",
+  "descripcionCorta": "TRANSF TSC-12-115-13,8-(550-110)",
+  "tipoFabricacion": "SERIE",
+  "unidad": "pz",
+  "norma": "6925ed7c6c33582c13c70573",
+  "prototipo": "6925ec256c33582c13c70567",
+  "estatus": "VIGENTE",
+  "fechaRegistro": "2025-11-25T18:09:46.417Z",
+  "pruebas": [
+    "6925f09a6c33582c13c70578"
+  ]
+}

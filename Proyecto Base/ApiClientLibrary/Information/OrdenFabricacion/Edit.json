@@ -1,0 +1,26 @@
+﻿{
+  "id": "6927ec57e878a7a1704b3b3a",
+  "claveOrdenFabricacion": "DMI607",
+  "loteFabricacion": "26",
+  "idProducto": "6925f0ea6c33582c13c7057a",
+  "detalleFabricacion": [
+    {
+      "contratoId": "6925f47c6c33582c13c7058b",
+      "tipoContrato": "ContratoCFEConGarantia",
+      "partidaContratoId": "1",
+      "descripcionPartida": "Transformador tipo poste",
+      "unidad": "pz",
+      "cantidadOriginalContrato": 100,
+      "cantidadAFabricar": 100
+    },
+    {
+      "contratoId": "6925f47c6c33582c13c7058b",
+      "tipoContrato": "ContratoCFEConGarantia",
+      "partidaContratoId": "2",
+      "descripcionPartida": "Transformador tipo poste",
+      "unidad": "pz",
+      "cantidadOriginalContrato": 100,
+      "cantidadAFabricar": 100
+    }
+  ]
+}

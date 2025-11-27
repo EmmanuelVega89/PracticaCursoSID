@@ -37,6 +37,12 @@ namespace ApiClientLibrary.Services
         private async Task EnviarEstadoSidAsync(CancellationToken cancellationToken)
         {
             var estado = new EstadoSIDDTO { Estado = "EN_PRUEBAS" };
+
+            // Validación de estado permitido
+            var estadosValidos = new List<string> { "EN_ESPERA", "EN_PRUEBAS" };
+            if (string.IsNullOrEmpty(estado.Estado) || !estadosValidos.Contains(estado.Estado))
+                throw new IndexOutOfRangeException($"El estado {estado.Estado} no es válido.");
+
             var json = JsonSerializer.Serialize(estado);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
