@@ -1,0 +1,739 @@
+//#RESGISTRO de instrumentos carga de informacion historico:
+//Servicio: InstrumentoService (No implementado en el contexto actual) 
+// Método: ObtenerInstrumentosAsync (supuesto)
+// Endpoint: GET F1_ConfiguracionInicial/Instrumento
+// Respuesta: Lista de InstrumentoDTO
+//Instrumento 1
+{
+	"id": "",
+	"nombre": "Analizador de impedancia de transformadores",
+	"numeroSerie": "IMP908776",
+	"fechaCalibracion": "2025-01-25T17:28:05.044Z",
+	"fechaVencimientoCalibracion": "2026-01-25T17:28:05.044Z",
+	"urlArchivo": "https://google.com",
+	"mD5": "",
+	"estatus": "ACTIVO",
+	"fechaRegistro": "2025-11-25T17:28:05.044Z"
+}
+//Instrumento 2: 
+{
+	"id": "",
+	"nombre": "Fuente de potencia para pruebas técnicas",
+	"numeroSerie": "PWR882341",
+	"fechaCalibracion": "2025-01-25T17:28:05.044Z",
+	"fechaVencimientoCalibracion": "2026-01-25T17:28:05.044Z",
+	"urlArchivo": "https://google.com",
+	"mD5": "",
+	"estatus": "ACTIVO",
+	"fechaRegistro": "2025-11-25T17:28:05.044Z"
+}
+//Instrumento 3
+{
+	"id": "",
+	"nombre": "Mdedidor de respuesta en frecuencia (FRA)",
+	"numeroSerie": "FRA119003",
+	"fechaCalibracion": "2025-01-25T17:28:05.044Z",
+	"fechaVencimientoCalibracion": "2026-01-25T17:28:05.044Z",
+	"urlArchivo": "https://google.com",
+	"mD5": "",
+	"estatus": "ACTIVO",
+	"fechaRegistro": "2025-11-25T17:28:05.044Z"
+}
+
+// Servicio: NormasService (No implementado en el contexto actual) 
+// Método: ObtenerNormasAsync (supuesto)
+// Endpoint: GET F1_ConfiguracionInicial/Norma
+// Respuesta: Lista de NormaDTO
+{
+  "id": "",
+  "clave": "CFEJ1100-92",
+  "nombre": "CFEJ1100-92",
+  "edicion": "2025",
+  "estatus": "VIGENTE",
+  "esCFE": true,
+  "fechaRegistro": "2025-11-25T17:55:08.638Z"
+}
+
+// Servicio: PrototipoService
+// Método: ObtenerPrototiposAsync
+// Endpoint: GET F1_ConfiguracionInicial/Prototipo
+// Respuesta: Lista de PrototipoDTO
+{
+  "id": "",
+  "numero": "CEP-301-2025",
+  "fechaEmision": "2025-01-25T17:48:28.893Z",
+  "fechaVencimiento": "2025-12-25T17:48:28.893Z",
+  "urlArchivo": "http://google.com",
+  "mD5": "",
+  "estatus": "VIGENTE",
+  "fechaRegistro": "2025-11-25T17:48:28.893Z"
+}
+
+// Servicio: PruebaService
+// Método: ObtenerPruebasAsync
+// Endpoint: GET F1_ConfiguracionInicial/Prueba
+// Respuesta: Lista de PruebaDTO
+{
+  "id": "",
+  "nombre": "Inpedancia procentual del transformador (%)",
+  "estatus": "ACTIVA",
+  "tipoPrueba": "ACEPTACION",
+  "tipoResultado": "VALOR_REFERENCIA",
+  "fechaRegistro": "2025-11-25T18:06:54.595Z"
+}
+{
+  "id": "",
+  "nombre": "Evaluacion de temperatura en devanado de baja tensión (°C)",
+  "estatus": "ACTIVA",
+  "tipoPrueba": "ACEPTACION",
+  "tipoResultado": "VALOR_REFERENCIA",
+  "fechaRegistro": "2025-11-25T18:06:54.595Z"
+}
+{
+  "id": "",
+  "nombre": "Respuesta en frecuencia (FRA) - integridad mecánica",
+  "estatus": "ACTIVA",
+  "tipoPrueba": "ACEPTACION",
+  "tipoResultado": "VALOR_REFERENCIA",
+  "fechaRegistro": "2025-11-25T18:06:54.595Z"
+}
+
+// Servicio: ProductoService
+// Método: ObtenerProductosAsync
+// Endpoint: GET F1_ConfiguracionInicial/Producto
+// Respuesta: Lista de ProductoDTO
+{
+  "id": "",
+  "codigoFabricante": "DCC604",
+  "descripcion": "TRANSFORMADOR PEDESTAL 13200",
+  "descripcionCorta": "TRANSFORMADOR PEDESTAL D1SC-50-13200YT-7",
+  "tipoFabricacion": "SERIE",
+  "unidad": "pz",
+  "norma": "69289850f7616b2f33783197",
+  "prototipo": "692898a1f7616b2f33783198",
+  "estatus": "VIGENTE",
+  "fechaRegistro": "2025-11-25T17:56:21.589Z",
+  "pruebas": [
+    "692898e0f7616b2f3378319c",
+    "69289905f7616b2f337831a1",
+    "6928991cf7616b2f337831a2"
+  ]
+}
+
+// Servicio: ValorReferenciaService
+// Método: ObtenerValoresReferenciaAsync
+// Endpoint: GET F1_ConfiguracionInicial/ValorReferencia
+// Respuesta: Lista de ValorReferenciaDTO
+{
+  "id": "",
+  "idProducto": "692899e2f7616b2f337831a4",
+  "idPrueba": "692898e0f7616b2f3378319c",
+  "valor": 3.27,
+  "valor2": 4.28,
+  "unidad": "%",
+  "comparacion": "RANGO",
+  "fechaRegistro": "2025-11-25T17:52:23.715Z"
+}
+{
+  "id": "",
+  "idProducto": "692899e2f7616b2f337831a4",
+  "idPrueba": "69289905f7616b2f337831a1",
+  "valor": 0,
+  "valor2": 65,
+  "unidad": "°C",
+  "comparacion": "VALOR_MAXIMO",
+  "fechaRegistro": "2025-11-25T17:52:23.715Z"
+}
+{
+  "id": "",
+  "idProducto": "692899e2f7616b2f337831a4",
+  "idPrueba": "6928991cf7616b2f337831a2",
+  "valor": 0,
+  "valor2": 0,
+  "unidad": "N/A",
+  "comparacion": "NO_COMPARAR",
+  "fechaRegistro": "2025-11-25T17:52:23.715Z"
+}
+
+// Servicio: ContratoService (No implementado en el contexto actual) 
+// Método: ObtenerContratosAsync (supuesto)
+// Endpoint: GET F1_ConfiguracionInicial/Contrato
+// Respuesta: Lista de ContratoDTO
+{
+  "$Tipo": "ContratoCFE",
+  "id": "",
+  "tipoContrato": "ContratoCFE",
+  "noContrato": "9100087612",
+  "estatus": "ACTIVO",
+  "detalleContrato" : [
+    {
+        "partidaContrato" : "102",
+        "descripcionAviso" : "TRANSFORMADORES PEDESTAL 13200",
+        "areaDestinoCFE" : "CFE",
+        "cantidad" : 1,
+        "unidad": "pz",
+        "importeTotal": 450000
+    },
+    {
+        "partidaContrato" : "204",
+        "descripcionAviso" : "TRANSFORMADORES PEDESTAL 13200",
+        "areaDestinoCFE" : "CFE",
+        "cantidad" : 2,
+        "unidad": "pz",
+        "importeTotal": 780000
+    }
+  ],
+  "urlArchivo" : "https://www.cfe.mx",
+  "mD5": "",
+  "fechaEntregaCFE":"2025-11-26T17:25:06.51Z"
+}
+{
+ "$Tipo": "ContratoParticular",
+ "id": "",
+ "tipoContrato": "ContratoParticular",
+ "noContrato": "PART0001",
+ "estatus": "ACTIVO",
+ "detalleContrato" : [{
+       "partidaContrato" : "1",
+       "descripcionAviso" : "TRANSFORMADORES PEDESTAL 13200",
+       "cantidad" : 2,
+       "unidad": "pz",
+       "importeTotal": 0
+ }]
+}
+
+// Servicio: OrdenFabricacionService
+// Método: ObtenerOrdenesFabricacionAsync
+// Endpoint: GET F2_PreparacionFabricacion/OrdenFabricacion
+// Respuesta: Lista de OrdenFabricacionDTO
+{
+  "id": "",
+  "claveOrdenFabricacion": "OF-2025-CFE-8821",
+  "loteFabricacion": "TDP00945671",
+  "idProducto": "692899e2f7616b2f337831a4",
+  "detalleFabricacion": [
+    {
+      "contratoId": "69289bbef7616b2f337831b2",
+      "tipoContrato": "ContratoCFE",
+      "partidaContratoId": "102",
+      "descripcionPartida": "TRANSFORMADORES PEDESTAL 13200",
+      "unidad": "pz",
+      "cantidadOriginalContrato": 1,
+      "cantidadAFabricar": 1
+    },
+    {
+      "contratoId": "69289bbef7616b2f337831b2",
+      "tipoContrato": "ContratoCFE",
+      "partidaContratoId": "204",
+      "descripcionPartida": "TRANSFORMADORES PEDESTAL 13200",
+      "unidad": "pz",
+      "cantidadOriginalContrato": 2,
+      "cantidadAFabricar": 2
+    },   
+    {
+      "contratoId": "69289bfbf7616b2f337831b5",
+      "tipoContrato": "ContratoParticular",
+      "partidaContratoId": "1",
+      "descripcionPartida": "TRANSFORMADORES PEDESTAL 13200",
+      "unidad": "pz",
+      "cantidadOriginalContrato": 2,
+      "cantidadAFabricar": 2
+    }
+  ]
+}
+
+// Servicio: ExpedienteService
+// Método: ObtenerExpedientePorIdAsync
+// Endpoint: GET F2_PreparacionFabricacion/ExpedientePruebas/{claveExpediente}
+// Respuesta: Lista de ExpedienteInspeccionCompleteDTO
+{
+  "id": "",
+  "claveExpediente": "FGW-2025-00452",
+  "ordenFabricacion": "69289ce7f7616b2f337831b9",
+  "cantidadMuestras": 5,
+  "maximoRechazos": 0,
+  "muestras": [
+    "TDP-00452-01",
+    "TDP-00452-02",
+    "TDP-00452-03",
+    "TDP-00452-04",
+    "TDP-00452-05"
+  ]
+}
+
+// Servicio: PruebasEjecucionService
+// Método: ObtenerResultadosPruebaAsync
+// Endpoint: GET F2_PreparacionFabricacion/ResultadoPrueba
+// Respuesta: Lista de ResultadoPruebaDTO
+//#PRUEBA 1
+//%
+{
+  "idPrueba": "692898e0f7616b2f3378319c",
+  "idValorReferencia": "69289ae5f7616b2f337831a9",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-01",
+  "idInstrumentoMedicion": "6928972ff7616b2f3378318f",
+  "valorMedido": 4.10,
+  "resultado": "string",
+  "numeroIntento": 1
+}
+//°C
+{
+  "idPrueba": "69289905f7616b2f337831a1",
+  "idValorReferencia": "69289b37f7616b2f337831ab",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-01",
+  "idInstrumentoMedicion": "6928978bf7616b2f33783192",
+  "valorMedido": 61,
+  "resultado": "string",
+  "numeroIntento": 3
+}
+//CUMPLE
+{
+  "idPrueba": "6928991cf7616b2f337831a2",
+  "idValorReferencia": "69289b6af7616b2f337831af",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-01",
+  "idInstrumentoMedicion": "692897bcf7616b2f33783193",
+  "valorMedido": 0,
+  "resultado": "SATISFACTORIO",
+  "numeroIntento": 1
+}
+//#PRUEBA_2
+//%
+{
+  "idPrueba": "692898e0f7616b2f3378319c",
+  "idValorReferencia": "69289ae5f7616b2f337831a9",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-02",
+  "idInstrumentoMedicion": "6928972ff7616b2f3378318f",
+  "valorMedido": 3.95,
+  "resultado": "string",
+  "numeroIntento": 1
+}
+//°C
+{
+  "idPrueba": "69289905f7616b2f337831a1",
+  "idValorReferencia": "69289b37f7616b2f337831ab",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-02",
+  "idInstrumentoMedicion": "6928978bf7616b2f33783192",
+  "valorMedido": 64,
+  "resultado": "string",
+  "numeroIntento": 1
+}
+//CUMPLE
+{
+  "idPrueba": "6928991cf7616b2f337831a2",
+  "idValorReferencia": "69289b6af7616b2f337831af",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-02",
+  "idInstrumentoMedicion": "692897bcf7616b2f33783193",
+  "valorMedido": 0,
+  "resultado": "SATISFACTORIO",
+  "numeroIntento": 1
+}
+//#PRUEBA_03
+//%
+{
+  "idPrueba": "692898e0f7616b2f3378319c",
+  "idValorReferencia": "69289ae5f7616b2f337831a9",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-03",
+  "idInstrumentoMedicion": "6928972ff7616b2f3378318f",
+  "valorMedido": 4.22,
+  "resultado": "string",
+  "numeroIntento": 1
+}
+//°C
+{
+  "idPrueba": "69289905f7616b2f337831a1",
+  "idValorReferencia": "69289b37f7616b2f337831ab",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-03",
+  "idInstrumentoMedicion": "6928978bf7616b2f33783192",
+  "valorMedido": 62,
+  "resultado": "string",
+  "numeroIntento": 1
+}
+//CUMPLE
+{
+  "idPrueba": "6928991cf7616b2f337831a2",
+  "idValorReferencia": "69289b6af7616b2f337831af",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-03",
+  "idInstrumentoMedicion": "692897bcf7616b2f33783193",
+  "valorMedido": 0,
+  "resultado": "SATISFACTORIO",
+  "numeroIntento": 1
+}
+//#PRUEBA_04
+//%
+{
+  "idPrueba": "692898e0f7616b2f3378319c",
+  "idValorReferencia": "69289ae5f7616b2f337831a9",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-04",
+  "idInstrumentoMedicion": "6928972ff7616b2f3378318f",
+  "valorMedido": 3.60,
+  "resultado": "string",
+  "numeroIntento": 1
+}
+{
+  "idPrueba": "692898e0f7616b2f3378319c",
+  "idValorReferencia": "69289ae5f7616b2f337831a9",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-04",
+  "idInstrumentoMedicion": "6928972ff7616b2f3378318f",
+  "valorMedido": 3.78,
+  "resultado": "string",
+  "numeroIntento": 3
+}
+//°C
+{
+  "idPrueba": "69289905f7616b2f337831a1",
+  "idValorReferencia": "69289b37f7616b2f337831ab",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-04",
+  "idInstrumentoMedicion": "6928978bf7616b2f33783192",
+  "valorMedido": 68,
+  "resultado": "string",
+  "numeroIntento": 1
+}
+{
+  "idPrueba": "69289905f7616b2f337831a1",
+  "idValorReferencia": "69289b37f7616b2f337831ab",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-04",
+  "idInstrumentoMedicion": "6928978bf7616b2f33783192",
+  "valorMedido": 64,
+  "resultado": "string",
+  "numeroIntento": 1
+}
+//CUMPLE
+{
+  "idPrueba": "6928991cf7616b2f337831a2",
+  "idValorReferencia": "69289b6af7616b2f337831af",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-04",
+  "idInstrumentoMedicion": "692897bcf7616b2f33783193",
+  "valorMedido": 0,
+  "resultado": "SATISFACTORIO",
+  "numeroIntento": 1
+}
+//#PRUEBA_05
+//%
+{
+  "idPrueba": "692898e0f7616b2f3378319c",
+  "idValorReferencia": "69289ae5f7616b2f337831a9",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-05",
+  "idInstrumentoMedicion": "6928972ff7616b2f3378318f",
+  "valorMedido": 4.05,
+  "resultado": "string",
+  "numeroIntento": 1
+}
+//°C
+{
+  "idPrueba": "69289905f7616b2f337831a1",
+  "idValorReferencia": "69289b37f7616b2f337831ab",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-05",
+  "idInstrumentoMedicion": "6928978bf7616b2f33783192",
+  "valorMedido": 63,
+  "resultado": "string",
+  "numeroIntento": 1
+}
+//CUMPLE
+{
+  "idPrueba": "6928991cf7616b2f337831a2",
+  "idValorReferencia": "69289b6af7616b2f337831af",
+  "fechaPrueba": "2025-11-27T17:54:20.833Z",
+  "operadorPrueba": "TDP-00452-05",
+  "idInstrumentoMedicion": "692897bcf7616b2f33783193",
+  "valorMedido": 0,
+  "resultado": "SATISFACTORIO",
+  "numeroIntento": 1
+}
+//#Aviso de pruebas.
+[
+  {
+    "id": "6928a97ff7616b2f33783210",
+    "aviso": 10,
+    "numApProv": null,
+    "familia_ID": "FASE",
+    "unidad_ID": "pz",
+    "pedido": "9100087612",
+    "partida": 102,
+    "cantidad": 5,
+    "costo": 2250000,
+    "moneda": "MXN",
+    "iva": 360000.0,
+    "lugar_Destino": "CFE",
+    "observaciones": "Expediente: FGW-2025-00452\r\nOrden Fabricación: OF-2025-CFE-8821\r\nMuestras: 5\r\nResultado: SATISFACTORIO\r\n",
+    "descripcion": "TRANSFORMADORES PEDESTAL 13200",
+    "descripcion_Corta": "TRANSFORMADOR PEDESTAL D1SC-50-13200YT-7",
+    "norma": "CFEJ1100-92",
+    "descripNS": null,
+    "tipo_Aviso": "C",
+    "numerosSerieOLote": [
+      {
+        "aviso": 1,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-01",
+        "cant": 1
+      },
+      {
+        "aviso": 2,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-02",
+        "cant": 1
+      },
+      {
+        "aviso": 3,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-03",
+        "cant": 1
+      },
+      {
+        "aviso": 4,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-04",
+        "cant": 1
+      },
+      {
+        "aviso": 5,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-05",
+        "cant": 1
+      }
+    ],
+    "penalizaciones": null,
+    "creado": {
+      "id": "82847928-1f01-44da-abea-1bb10eb114ae",
+      "fecha": "2025-11-27T13:41:51.1323317-06:00",
+      "usuario": "emmanuel.vegaledezma@gmail.com",
+      "empresa": "68984",
+      "evento": "Agregar"
+    },
+    "empresa": "68984",
+    "fechaRegistro": "2025-11-27T13:41:51.1311308-06:00",
+    "actualizaciones": []
+  },
+  {
+    "id": "6928a97ff7616b2f33783211",
+    "aviso": 11,
+    "numApProv": null,
+    "familia_ID": "FASE",
+    "unidad_ID": "pz",
+    "pedido": "9100087612",
+    "partida": 204,
+    "cantidad": 5,
+    "costo": 1950000.0,
+    "moneda": "MXN",
+    "iva": 312000.0,
+    "lugar_Destino": "CFE",
+    "observaciones": "Expediente: FGW-2025-00452\r\nOrden Fabricación: OF-2025-CFE-8821\r\nMuestras: 5\r\nResultado: SATISFACTORIO\r\n",
+    "descripcion": "TRANSFORMADORES PEDESTAL 13200",
+    "descripcion_Corta": "TRANSFORMADOR PEDESTAL D1SC-50-13200YT-7",
+    "norma": "CFEJ1100-92",
+    "descripNS": null,
+    "tipo_Aviso": "C",
+    "numerosSerieOLote": [
+      {
+        "aviso": 1,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-01",
+        "cant": 1
+      },
+      {
+        "aviso": 2,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-02",
+        "cant": 1
+      },
+      {
+        "aviso": 3,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-03",
+        "cant": 1
+      },
+      {
+        "aviso": 4,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-04",
+        "cant": 1
+      },
+      {
+        "aviso": 5,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-05",
+        "cant": 1
+      }
+    ],
+    "penalizaciones": null,
+    "creado": {
+      "id": "738403a8-2742-4857-a06a-c862d22f9829",
+      "fecha": "2025-11-27T13:41:51.1506118-06:00",
+      "usuario": "emmanuel.vegaledezma@gmail.com",
+      "empresa": "68984",
+      "evento": "Agregar"
+    },
+    "empresa": "68984",
+    "fechaRegistro": "2025-11-27T13:41:51.1493066-06:00",
+    "actualizaciones": []
+  },
+  {
+    "id": "6928a97ff7616b2f33783212",
+    "aviso": 12,
+    "numApProv": null,
+    "familia_ID": "FASE",
+    "unidad_ID": "pz",
+    "pedido": "Particular",
+    "partida": 1,
+    "cantidad": 5,
+    "costo": 0,
+    "moneda": "MXN",
+    "iva": 0.0,
+    "lugar_Destino": "STOCK",
+    "observaciones": "Expediente: FGW-2025-00452\r\nOrden Fabricación: OF-2025-CFE-8821\r\nMuestras: 5\r\nResultado: SATISFACTORIO\r\n",
+    "descripcion": "TRANSFORMADORES PEDESTAL 13200",
+    "descripcion_Corta": "TRANSFORMADOR PEDESTAL D1SC-50-13200YT-7",
+    "norma": "CFEJ1100-92",
+    "descripNS": null,
+    "tipo_Aviso": "P",
+    "numerosSerieOLote": [
+      {
+        "aviso": 1,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-01",
+        "cant": 1
+      },
+      {
+        "aviso": 2,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-02",
+        "cant": 1
+      },
+      {
+        "aviso": 3,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-03",
+        "cant": 1
+      },
+      {
+        "aviso": 4,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-04",
+        "cant": 1
+      },
+      {
+        "aviso": 5,
+        "no_Del": null,
+        "no_Al": null,
+        "del2": null,
+        "al2": null,
+        "patIni": null,
+        "patFin": null,
+        "patMed": null,
+        "descSerie": "TDP-00452-05",
+        "cant": 1
+      }
+    ],
+    "penalizaciones": null,
+    "creado": {
+      "id": "3f6ad651-ef2f-49a6-8fb0-c1e0d2cf1b68",
+      "fecha": "2025-11-27T13:41:51.1713426-06:00",
+      "usuario": "emmanuel.vegaledezma@gmail.com",
+      "empresa": "68984",
+      "evento": "Agregar"
+    },
+    "empresa": "68984",
+    "fechaRegistro": "2025-11-27T13:41:51.1701719-06:00",
+    "actualizaciones": []
+  }
+]

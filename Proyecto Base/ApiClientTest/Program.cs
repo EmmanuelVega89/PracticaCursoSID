@@ -1755,13 +1755,65 @@ if (responseAuth.IsSuccess)
                                         }
                                         else
                                         {
-                                            var table = new Table();
-                                            table.AddColumn("Aviso (estructura vacía)");
                                             foreach (var aviso in avisos)
                                             {
-                                                table.AddRow("[grey]AvisoPruebaDTO[/]");
+                                                var table = new Table();
+                                                table.AddColumn("Id");
+                                                table.AddColumn("Aviso");
+                                                table.AddColumn("Familia");
+                                                table.AddColumn("Unidad");
+                                                table.AddColumn("Pedido");
+                                                table.AddColumn("Partida");
+                                                table.AddColumn("Cantidad");
+                                                table.AddColumn("Costo");
+                                                table.AddColumn("Moneda");
+                                                table.AddColumn("Iva");
+                                                table.AddColumn("Lugar Destino");
+                                                table.AddColumn("Descripcion");
+                                                table.AddColumn("Norma");
+                                                table.AddColumn("Tipo Aviso");
+                                                table.AddColumn("Fecha Registro");
+
+                                                table.AddRow(
+                                                    aviso.Id ?? "",
+                                                    aviso.Aviso.ToString(),
+                                                    aviso.Familia_ID ?? "",
+                                                    aviso.Unidad_ID ?? "",
+                                                    aviso.Pedido ?? "",
+                                                    aviso.Partida.ToString(),
+                                                    aviso.Cantidad.ToString(),
+                                                    aviso.Costo.ToString("N2"),
+                                                    aviso.Moneda ?? "",
+                                                    aviso.Iva.ToString("N2"),
+                                                    aviso.Lugar_Destino ?? "",
+                                                    aviso.Descripcion ?? "",
+                                                    aviso.Norma ?? "",
+                                                    aviso.Tipo_Aviso ?? "",
+                                                    aviso.FechaRegistro.ToString("u")
+                                                );
+                                                AnsiConsole.MarkupLine("[bold blue]AVISO DE PRUEBA[/]");
+                                                AnsiConsole.Write(table);
+
+                                                // Tabla secundaria para los números de serie o lote
+                                                if (aviso.NumerosSerieOLote != null && aviso.NumerosSerieOLote.Count > 0)
+                                                {
+                                                    var serieTable = new Table();
+                                                    serieTable.AddColumn("Aviso");
+                                                    serieTable.AddColumn("DescSerie");
+                                                    serieTable.AddColumn("Cantidad");
+
+                                                    foreach (var serie in aviso.NumerosSerieOLote)
+                                                    {
+                                                        serieTable.AddRow(
+                                                            serie.Aviso.ToString(),
+                                                            serie.DescSerie ?? "",
+                                                            serie.Cant.ToString()
+                                                        );
+                                                    }
+                                                    AnsiConsole.MarkupLine("[bold]NÚMEROS DE SERIE O LOTE:[/]");
+                                                    AnsiConsole.Write(serieTable);
+                                                }
                                             }
-                                            AnsiConsole.Write(table);
                                         }
                                     }
                                     catch (Exception ex)
