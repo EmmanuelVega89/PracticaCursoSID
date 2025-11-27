@@ -83,6 +83,7 @@ if (responseAuth.IsSuccess)
                     "Contratos",
                     "Órdenes de Fabricación",
                     "Expedientes de Pruebas",
+                    "Pruebas de Ejecución",
                     "Terminar ejecución"
                 }
             )
@@ -1573,6 +1574,226 @@ if (responseAuth.IsSuccess)
                                 }
                             case "Regresar":
                                 salirExpedientes = true;
+                                break;
+                        }
+                    }
+                    break;
+                }
+            //**************************************************************************************************************
+            //***[Práctica 11: Ejecución de Pruebas y Liberación]***********************************************************
+            //**************************************************************************************************************
+            case "Pruebas de Ejecución":
+                {
+                    bool salirPruebasEjecucion = false;
+                    while (!salirPruebasEjecucion)
+                    {
+                        var opcionPruebaEjecucion = AnsiConsole.Prompt(
+                            new SelectionPrompt<string>()
+                                .Title("[bold]Seleccione una opción de Pruebas de Ejecución:[/]")
+                                .AddChoices(new[]
+                                {
+                                    "Agregar resultado de prueba (JSON)",
+                                    "Obtener pruebas no satisfactorias",
+                                    "Validar expediente",
+                                    "Terminar pruebas de expediente",
+                                    "Crear aviso de prueba",
+                                    "Consultar avisos",
+                                    "Cerrar expediente",
+                                    "Regresar"
+                                })
+                        );
+
+                        switch (opcionPruebaEjecucion)
+                        {
+                            case "Agregar resultado de prueba (JSON)":
+                                {
+                                    using var httpClient = new HttpClient();
+                                    var pruebasEjecucionService = new PruebasEjecucionService(httpClient, configuration, token);
+
+                                    var expediente = AnsiConsole.Ask<string>("Ingrese la [green]clave del expediente[/]:");
+                                    var muestra = AnsiConsole.Ask<string>("Ingrese el [blue]identificador de la muestra[/]:");
+
+                                    try
+                                    {
+                                        var exito = await pruebasEjecucionService.AgregarResultadoPruebaAsync(expediente, muestra);
+                                        if (exito)
+                                            AnsiConsole.MarkupLine("[green]Resultado de prueba agregado correctamente.[/]");
+                                        else
+                                            AnsiConsole.MarkupLine("[red]No se pudo agregar el resultado de prueba.[/]");
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        AnsiConsole.MarkupLine($"[red]Error al agregar resultado de prueba: {ex.Message}[/]");
+                                    }
+                                    break;
+                                }
+                            case "Obtener pruebas no satisfactorias":
+                                {
+                                    using var httpClient = new HttpClient();
+                                    var pruebasEjecucionService = new PruebasEjecucionService(httpClient, configuration, token);
+
+                                    var expediente = AnsiConsole.Ask<string>("Ingrese la [green]clave del expediente[/]:");
+
+                                    try
+                                    {
+                                        var pruebas = await pruebasEjecucionService.ObtenerPruebasNoSatisfactoriasAsync(expediente);
+                                        if (pruebas.Count == 0)
+                                        {
+                                            AnsiConsole.MarkupLine("[yellow]No se encontraron pruebas no satisfactorias.[/]");
+                                        }
+                                        else
+                                        {
+                                            var table = new Table();
+                                            table.AddColumn("Id");
+                                            table.AddColumn("Nombre");
+                                            table.AddColumn("Estatus");
+                                            table.AddColumn("Tipo Prueba");
+                                            table.AddColumn("Tipo Resultado");
+                                            table.AddColumn("Fecha Registro");
+
+                                            foreach (var p in pruebas)
+                                            {
+                                                table.AddRow(
+                                                    p.Id ?? "",
+                                                    p.Nombre ?? "",
+                                                    p.Estatus ?? "",
+                                                    p.TipoPrueba ?? "",
+                                                    p.TipoResultado ?? "",
+                                                    p.FechaRegistro.ToString("u")
+                                                );
+                                            }
+                                            AnsiConsole.Write(table);
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        AnsiConsole.MarkupLine($"[red]Error al obtener pruebas no satisfactorias: {ex.Message}[/]");
+                                    }
+                                    break;
+                                }
+                            case "Validar expediente":
+                                {
+                                    using var httpClient = new HttpClient();
+                                    var pruebasEjecucionService = new PruebasEjecucionService(httpClient, configuration, token);
+
+                                    var expediente = AnsiConsole.Ask<string>("Ingrese la [green]clave del expediente[/]:");
+
+                                    try
+                                    {
+                                        var resultado = await pruebasEjecucionService.ValidarExpedienteAsync(expediente);
+                                        if (resultado == null)
+                                        {
+                                            AnsiConsole.MarkupLine("[yellow]No se pudo validar el expediente.[/]");
+                                        }
+                                        else
+                                        {
+                                            AnsiConsole.MarkupLine("[green]Expediente validado correctamente.[/]");
+                                            // Puedes imprimir detalles si lo deseas
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        AnsiConsole.MarkupLine($"[red]Error al validar expediente: {ex.Message}[/]");
+                                    }
+                                    break;
+                                }
+                            case "Terminar pruebas de expediente":
+                                {
+                                    using var httpClient = new HttpClient();
+                                    var pruebasEjecucionService = new PruebasEjecucionService(httpClient, configuration, token);
+
+                                    var expediente = AnsiConsole.Ask<string>("Ingrese la [green]clave del expediente[/]:");
+
+                                    try
+                                    {
+                                        var exito = await pruebasEjecucionService.TerminarPruebasExpedienteAsync(expediente);
+                                        if (exito)
+                                            AnsiConsole.MarkupLine("[green]Pruebas de expediente terminadas correctamente.[/]");
+                                        else
+                                            AnsiConsole.MarkupLine("[red]No se pudo terminar las pruebas del expediente.[/]");
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        AnsiConsole.MarkupLine($"[red]Error al terminar pruebas de expediente: {ex.Message}[/]");
+                                    }
+                                    break;
+                                }
+                            case "Crear aviso de prueba":
+                                {
+                                    using var httpClient = new HttpClient();
+                                    var pruebasEjecucionService = new PruebasEjecucionService(httpClient, configuration, token);
+
+                                    var expediente = AnsiConsole.Ask<string>("Ingrese la [green]clave del expediente[/]:");
+
+                                    try
+                                    {
+                                        var exito = await pruebasEjecucionService.CrearAvisoPruebaAsync(expediente);
+                                        if (exito)
+                                            AnsiConsole.MarkupLine("[green]Aviso de prueba creado correctamente.[/]");
+                                        else
+                                            AnsiConsole.MarkupLine("[red]No se pudo crear el aviso de prueba.[/]");
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        AnsiConsole.MarkupLine($"[red]Error al crear aviso de prueba: {ex.Message}[/]");
+                                    }
+                                    break;
+                                }
+                            case "Consultar avisos":
+                                {
+                                    using var httpClient = new HttpClient();
+                                    var pruebasEjecucionService = new PruebasEjecucionService(httpClient, configuration, token);
+
+                                    var expediente = AnsiConsole.Ask<string>("Ingrese la [green]clave del expediente[/]:");
+
+                                    try
+                                    {
+                                        var avisos = await pruebasEjecucionService.ConsultarAvisosAsync(expediente);
+                                        if (avisos.Count == 0)
+                                        {
+                                            AnsiConsole.MarkupLine("[yellow]No se encontraron avisos para el expediente.[/]");
+                                        }
+                                        else
+                                        {
+                                            var table = new Table();
+                                            table.AddColumn("Aviso (estructura vacía)");
+                                            foreach (var aviso in avisos)
+                                            {
+                                                table.AddRow("[grey]AvisoPruebaDTO[/]");
+                                            }
+                                            AnsiConsole.Write(table);
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        AnsiConsole.MarkupLine($"[red]Error al consultar avisos: {ex.Message}[/]");
+                                    }
+                                    break;
+                                }
+                            case "Cerrar expediente":
+                                {
+                                    using var httpClient = new HttpClient();
+                                    var pruebasEjecucionService = new PruebasEjecucionService(httpClient, configuration, token);
+
+                                    var expediente = AnsiConsole.Ask<string>("Ingrese la [green]clave del expediente[/]:");
+                                    var resultado = AnsiConsole.Ask<string>("Ingrese el [blue]resultado del expediente[/]:");
+
+                                    try
+                                    {
+                                        var exito = await pruebasEjecucionService.CerrarExpedienteAsync(expediente, resultado);
+                                        if (exito)
+                                            AnsiConsole.MarkupLine("[green]Expediente cerrado correctamente.[/]");
+                                        else
+                                            AnsiConsole.MarkupLine("[red]No se pudo cerrar el expediente.[/]");
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        AnsiConsole.MarkupLine($"[red]Error al cerrar expediente: {ex.Message}[/]");
+                                    }
+                                    break;
+                                }
+                            case "Regresar":
+                                salirPruebasEjecucion = true;
                                 break;
                         }
                     }

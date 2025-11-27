@@ -1,10 +1,10 @@
 ﻿{
-  "id": "6925f28a6c33582c13c70584",
-  "idProducto": "6925f0ea6c33582c13c7057a",
-  "idPrueba": "6925f09a6c33582c13c70578",
-  "valor": 51,
-  "valor2": 53,
-  "unidad": "n/a",
+  "id": "69289ae5f7616b2f337831a9",
+  "idProducto": "692899e2f7616b2f337831a4",
+  "idPrueba": "692898e0f7616b2f3378319c",
+  "valor": 3.72,
+  "valor2": 4.28,
+  "unidad": "%",
   "comparacion": "RANGO",
-  "fechaRegistro": "2025-11-25T18:16:42.611Z"
+  "fechaRegistro": "2025-11-25T17:52:23.715Z"
 }

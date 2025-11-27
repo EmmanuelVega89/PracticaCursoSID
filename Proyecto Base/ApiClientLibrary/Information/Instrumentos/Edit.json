@@ -1,11 +1,11 @@
 ﻿{
-  "id": "6925e7af6c33582c13c70559",
-  "nombre": "BALANZA",
-  "numeroSerie": "4535355",
-  "fechaCalibracion": "2025-01-25T17:28:05.044Z",
-  "fechaVencimientoCalibracion": "2026-01-25T17:28:05.044Z",
-  "urlArchivo": "dfsfsdgdgfs",
-  "mD5": "",
-  "estatus": "ACTIVO",
-  "fechaRegistro": "2025-11-25T17:28:05.044Z"
+	"id": "69287b570c4622cb379586b3",
+	"nombre": "Analizador de impedancia de transformadores",
+	"numeroSerie": "PWR882341",
+	"fechaCalibracion": "2025-01-25T17:28:05.044Z",
+	"fechaVencimientoCalibracion": "2026-01-25T17:28:05.044Z",
+	"urlArchivo": "https://google.com",
+	"mD5": "",
+	"estatus": "ACTIVO",
+	"fechaRegistro": "2025-11-25T17:28:05.044Z"
 }

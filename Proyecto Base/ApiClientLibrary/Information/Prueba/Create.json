@@ -1,6 +1,6 @@
 ﻿{
   "id": "",
-  "nombre": "Inspeción",
+  "nombre": "Respuesta en frecuencia (FRA) - integridad mecánica",
   "estatus": "ACTIVA",
   "tipoPrueba": "ACEPTACION",
   "tipoResultado": "VALOR_REFERENCIA",

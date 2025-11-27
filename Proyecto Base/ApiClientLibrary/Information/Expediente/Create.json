@@ -1,12 +1,14 @@
 ﻿{
   "id": "",
-  "claveExpediente": "EXP-2711",
-  "ordenFabricacion": "6925f6216c33582c13c7058e",
-  "cantidadMuestras": 10,
+  "claveExpediente": "FGW-2025-00452",
+  "ordenFabricacion": "69289ce7f7616b2f337831b9",
+  "cantidadMuestras": 5,
   "maximoRechazos": 0,
   "muestras": [
-    "1",
-    "2",
-    "3"
+    "TDP-00452-01",
+    "TDP-00452-02",
+    "TDP-00452-03",
+    "TDP-00452-04",
+    "TDP-00452-05"
   ]
 }

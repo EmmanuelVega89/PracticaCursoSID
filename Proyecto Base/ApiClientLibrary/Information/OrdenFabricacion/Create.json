@@ -1,26 +1,35 @@
 ﻿{
   "id": "",
-  "claveOrdenFabricacion": "DMI607",
-  "loteFabricacion": "25",
-  "idProducto": "6925f0ea6c33582c13c7057a",
+  "claveOrdenFabricacion": "OF-2025-CFE-8821",
+  "loteFabricacion": "TDP00945671",
+  "idProducto": "692899e2f7616b2f337831a4",
   "detalleFabricacion": [
     {
-      "contratoId": "6925f47c6c33582c13c7058b",
-      "tipoContrato": "ContratoCFEConGarantia",
-      "partidaContratoId": "1",
-      "descripcionPartida": "Transformador tipo poste",
+      "contratoId": "69289bbef7616b2f337831b2",
+      "tipoContrato": "ContratoCFE",
+      "partidaContratoId": "102",
+      "descripcionPartida": "TRANSFORMADORES PEDESTAL 13200",
       "unidad": "pz",
-      "cantidadOriginalContrato": 100,
-      "cantidadAFabricar": 100
+      "cantidadOriginalContrato": 1,
+      "cantidadAFabricar": 1
     },
     {
-      "contratoId": "6925f47c6c33582c13c7058b",
-      "tipoContrato": "ContratoCFEConGarantia",
-      "partidaContratoId": "2",
-      "descripcionPartida": "Transformador tipo poste",
+      "contratoId": "69289bbef7616b2f337831b2",
+      "tipoContrato": "ContratoCFE",
+      "partidaContratoId": "204",
+      "descripcionPartida": "TRANSFORMADORES PEDESTAL 13200",
       "unidad": "pz",
-      "cantidadOriginalContrato": 100,
-      "cantidadAFabricar": 100
+      "cantidadOriginalContrato": 2,
+      "cantidadAFabricar": 2
+    },   
+    {
+      "contratoId": "69289bfbf7616b2f337831b5",
+      "tipoContrato": "ContratoParticular",
+      "partidaContratoId": "1",
+      "descripcionPartida": "TRANSFORMADORES PEDESTAL 13200",
+      "unidad": "pz",
+      "cantidadOriginalContrato": 2,
+      "cantidadAFabricar": 2
     }
   ]
 }
